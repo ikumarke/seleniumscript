@@ -1,0 +1,42 @@
+1. Firefox browser launch:
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Firefox.FirefoxDriver;
+
+public class Guvipr {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.Firefox.driver", "C:\\Users\\91638\\eclipse-workspace\\guvi\\driver\\Firefoxdriver.exe");
+		
+		WebDriver driver = new FirefoxDriver();;
+		driver.get("https://www.google.com/");
+                Thread.sleep(6000)
+                driver.close();
+
+2. .............................................................
+package guvigu;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Guvipro {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\91638\\eclipse-workspace\\guvigu\\driver\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/");
+		Thread.sleep(16000);
+		driver.manage().window().maximize();
+		Thread.sleep(6000);
+
+		boolean findElement = driver.findElement(By.id("nava")).isDisplayed();
+		Thread.sleep(6000);
+
+		System.out.println(findElement);
+		
+	}
+
+}
